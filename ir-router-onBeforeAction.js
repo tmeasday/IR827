@@ -4,6 +4,7 @@ Router.configure({
   },
   onBeforeAction: function() {
     console.log('global onBeforeAction');
+    this.next();
   }
 });
 
@@ -13,6 +14,7 @@ Router.route('/', {
   },
   onBeforeAction: function() {
     console.log('root onBeforeAction');
+    this.next();
   },
   action: function() {
     console.log('root action')
@@ -25,6 +27,7 @@ Router.route('/a', {
   },
   onBeforeAction: function() {
     console.log('a onBeforeAction');
+    this.next();
   },
   action: function() {
     console.log('a action')
